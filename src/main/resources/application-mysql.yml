@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://${demo.mysql.host}:${demo.mysql.port}/${demo.mysql.database}?passwordCharacterEncoding=UTF8&allowPublicKeyRetrieval=true&useSSL=false
+    username: ${demo.mysql.username}
+    password: ${demo.mysql.password}
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 5
+      maximum-pool-size: 20
+  jpa:
+    show-sql: true

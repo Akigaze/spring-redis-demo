@@ -1,0 +1,18 @@
+###
+GET http://localhost:9889/api/v1/container/test-OOLU-bkg5-1
+
+
+###
+POST http://localhost:9889/api/v1/container
+Content-Type: application/json
+
+{
+  "refNum": "test-OOLU-bkg5-2",
+  "tenantId":"test",
+  "scac": "OOLU",
+  "bookingNumber":"bkg5",
+  "containerNumber": "unassigned"
+}
+
+###
+GET http://localhost:9889/api/v1/carrier/CMDU
