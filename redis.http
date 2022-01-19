@@ -1,5 +1,5 @@
-###
-GET http://localhost:9889/api/v1/container/test-OOLU-bkg5-1
+### V1
+GET http://localhost:9889/api/v1/container/test-OOLU-bkg5-2
 
 
 ###
@@ -11,8 +11,36 @@ Content-Type: application/json
   "tenantId":"test",
   "scac": "OOLU",
   "bookingNumber":"bkg5",
-  "containerNumber": "unassigned"
+  "containerNumber": "unassigned",
+  "createdTime": "2022-01-12T01:12:32.000Z"
+}
+
+
+###
+POST http://localhost:9889/api/v1/container?secondsToLive=30
+Content-Type: application/json
+
+{
+  "refNum": "test-OOLU-bkg5-3",
+  "tenantId":"test",
+  "scac": "OOLU",
+  "bookingNumber":"bkg5",
+  "containerNumber": "unassigned",
+  "createdTime": "2022-01-13T01:12:32.000Z"
 }
 
 ###
+PUT http://localhost:9889/api/v1/container
+Content-Type: application/json
+
+{
+  "refNum": "test-OOLU-bkg5-2",
+  "containerNumber": "cntr111"
+}
+
+### V1
+DELETE http://localhost:9889/api/v1/container/test-OOLU-bkg5-1
+
+
+### V2
 GET http://localhost:9889/api/v1/carrier/CMDU
