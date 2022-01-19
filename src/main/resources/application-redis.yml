@@ -20,3 +20,5 @@ spring:
     type: redis
     redis:
       use-key-prefix: true
+      key-prefix: test
+      time-to-live: 200

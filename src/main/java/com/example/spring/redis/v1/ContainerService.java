@@ -13,13 +13,13 @@ public class ContainerService {
 
   //  @Cacheable(cacheNames = "container", key = "container.refNum")
   public ContainerEntity save(ContainerEntity container) {
-    redisTemplate.opsForValue().set("container:" + container.getRefNum(), container);
+    redisTemplate.opsForValue().set(container.getRefNum(), container);
     return container;
   }
 
   //  @Cacheable(cacheNames = "container", key = "container.refNum")
   public ContainerEntity get(String refNum) {
-    return redisTemplate.opsForValue().get("container:" + refNum);
+    return redisTemplate.opsForValue().get(refNum);
 
   }
 }
